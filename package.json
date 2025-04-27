@@ -1,0 +1,11 @@
+{
+  "name": "geocore-qa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SA-GeoTech/geocore-qa.git",
+  "author": "OmniiaHesham <ohesham@gt.com.sa>",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^14.3.2"
+  }
+}

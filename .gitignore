@@ -1,0 +1,38 @@
+# Node modules (big files)
+node_modules/
+
+# Cypress generated folders
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Cypress cache
+.cypress_cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# GitHub Codespaces
+.devcontainer/
+
+# Mac folder attributes
+.AppleDouble
+
+# Windows System Files
+Desktop.ini
