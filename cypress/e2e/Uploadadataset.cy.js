@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-
+import LoginPage from "../Pages/loginPage";
 import WorkSpacesPage from "../Pages/workspacespage"
 
 describe('Upload a data set', () => {
@@ -23,11 +23,13 @@ describe('Upload a data set', () => {
 
 
     it('uploadfile', () => {
-      const loginpage = new LoginPage 
+      const workspacespage = new WorkSpacesPage 
       
-      loginpage.load()
-      loginpage.ClickOnLoginBtn()
-      loginpage.login("dev@gt.com.sa" , "q9qcvzssqr")
+      workspacespage.SwitchOrganizations()
+      workspacespage.ChangeLanguage()
+      workspacespage.workspacessorting()
+      workspacespage.SearchForaworkspace("")
+
 
     });
 

@@ -84,7 +84,7 @@ class WorkSpacesPage {
     }
 
     SearchForaworkspace () {
-        this.SearchForaworkspace.type(workspacename)
+        this.SearchForaworkspace.type("workspacename")
     }
 
     workspacessorting () {
@@ -96,4 +96,4 @@ class WorkSpacesPage {
 
 }
 
-
+export default WorkSpacesPage
