@@ -3,10 +3,10 @@ class WorkSpacesPage {
 
     //Elements 
 
-    get Uploadfilebtn () {
-        return cy.get('.grid-cols-2 > :nth-child(1)')
-    }
-
+    get Uploadfilebtn() {
+        return cy.get('.grid-cols-2 > :nth-child(1)', { timeout: 10000 }).should('not.be.disabled')
+      }
+      
     get DesignLayerfromScratch () { 
        return cy.get('.grid-cols-2 > :nth-child(2)')
 
@@ -23,8 +23,12 @@ class WorkSpacesPage {
     }
 
     get organizationswitcher () {
-        return cy.get('#radix-\:r3\: > [tabindex="0"]')
+        return cy.get('[data-testid="geocore-Header-DropdownMenuTrigger"]',{ timeout: 15000 }).should('be.visible')
 
+    }
+
+    get OrganizationTriger () {
+        return cy.get('#radix-\:r3\: > [tabindex="0"]' , { timeout: 15000 }).should('be.visible')
     }
 
     get ACMEOrganization () {
@@ -64,7 +68,7 @@ class WorkSpacesPage {
     }
 
     get languagechanger () {
-        return cy.get('.space-x-4 > .justify-center')
+        return cy.get('.space-x-4 > [data-testid="geocore-button-Comp"]')
     }
 
     //Methods
@@ -77,6 +81,8 @@ class WorkSpacesPage {
     }
 
     SwitchOrganizations () {
+        this.organizationswitcher.click()
+        this.OrganizationTriger.click()
         this.AaenOrganization.click()
         this.GeotechOrganization.click ()
         this.ACMEOrganization.click()

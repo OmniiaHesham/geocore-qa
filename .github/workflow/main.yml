@@ -1,0 +1,46 @@
+name: GeoCore E2E Tests
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  OVPN_FILE: ./vpn_config.ovpn
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    container: 
+      image: cypress/browsers:node18.12.0-chrome107-ff107 # Docker image with Node + Chrome + Cypress
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up VPN credentials
+        run: |
+          echo "${{ secrets.VPN_CREDS }}" > vpn_config.ovpn
+          echo "${{ secrets.VPN_AUTH }}" > credentials.txt
+
+      - name: Install OpenVPN
+        run: |
+          apt-get update && apt-get install -y openvpn
+          openvpn --config vpn_config.ovpn --auth-user-pass credentials.txt --daemon
+          sleep 25
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run Cypress tests (headless Chrome)
+        run: yarn run cypress run --browser chrome
+
+      - name: Upload Cypress Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/videos
+            cypress/screenshots

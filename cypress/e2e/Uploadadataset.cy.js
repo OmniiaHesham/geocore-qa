@@ -1,37 +1,30 @@
 /// <reference types="cypress" />
 
-import LoginPage from "../Pages/loginPage";
-import WorkSpacesPage from "../Pages/workspacespage"
+import LoginPage from "../Pages/LoginPage";
+import WorkSpacesPage from "../Pages/workspacespage";
+import CreateNewFile_StepOne from "../Pages/CreateNewFile_StepOne";
 
-describe('Upload a data set', () => {
-    beforeEach (() => {
+describe('GeoCore - Upload Dataset Flow', () => {
+  const loginpage = new LoginPage 
+  const workspacesPage = new WorkSpacesPage
+  const createnewfile_stepone = new CreateNewFile_StepOne
 
-        //Perform Login
+  before (() => {
+    // Visit the login page and perform login
+    //Login to the App 
+    loginpage.load()
+    loginpage.openLoginForm()
+    loginpage.login("dev@gt.com.sa" , "q9qcvzssqr")
 
-        it('uploadfile', () => {
-            const loginpage = new LoginPage 
-            
-            loginpage.load()
-            loginpage.ClickOnLoginBtn()
-            loginpage.login("dev@gt.com.sa" , "q9qcvzssqr")
-      
-          });
+    // Optional: add assertion to ensure login succeeded
+    cy.url().should('include', '/dashboard'); 
+  });
 
-
-    })
-
-
-
-    it('uploadfile', () => {
-      const workspacespage = new WorkSpacesPage 
-      
-      workspacespage.SwitchOrganizations()
-      workspacespage.ChangeLanguage()
-      workspacespage.workspacessorting()
-      workspacespage.SearchForaworkspace("")
-
-
-    });
+  it('should upload a dataset file successfully', () => {
+    workspacesPage.ClickOnUploadFile();
+    createnewfile_stepone.enterlayerinfo("Automated Layer" , "This is an automated description to test adding layer to Geocore")
+    
 
     
-})
+  });
+});
