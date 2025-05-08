@@ -1,16 +1,16 @@
 /// <reference types="cypress" />
 
 
-import LoginPage from "../Pages/loginPage"
+import LoginPage from "../Pages/LoginPage"
 
 
   
   describe('Should Login to GEOCORE', () => {
-    it('Visit', () => {
+    it('Visitgeocore', () => {
       const loginpage = new LoginPage 
       
       loginpage.load()
-      loginpage.ClickOnLoginBtn()
+      loginpage.openLoginForm()
       loginpage.login("dev@gt.com.sa" , "q9qcvzssqr")
 
     });
