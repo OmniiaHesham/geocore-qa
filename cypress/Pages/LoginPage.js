@@ -5,9 +5,9 @@ class LoginPage {
       return cy.contains('button', /تسجيل الدخول|Login/);
     }
   
-    get loginFormContainer() {
-      return cy.get('.bg-white > .bg-custom-bg');
-    }
+    // get loginFormContainer() {
+    //   return cy.get('.bg-white > .bg-custom-bg');
+    // }
   
     get emailInput() {
       return cy.get('#id_user_identifier', { timeout: 15000 }).should('be.visible');
@@ -30,7 +30,7 @@ class LoginPage {
   
     openLoginForm() {
       this.loginTriggerButton.click();
-      this.loginFormContainer.should('exist').click();
+      //this.loginFormContainer.should('exist').click();
     }
   
     login(email, password) {

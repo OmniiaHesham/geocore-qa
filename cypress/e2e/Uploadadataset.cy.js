@@ -21,9 +21,15 @@ describe('GeoCore - Upload Dataset Flow', () => {
   });
 
   it('should upload a dataset file successfully', () => {
-    workspacesPage.ClickOnUploadFile();
+    workspacesPage.ClickOnUploadFile()
     createnewfile_stepone.enterlayerinfo("Automated Layer" , "This is an automated description to test adding layer to Geocore")
-    
+    createnewfile_stepone.uploadFile('offers_geojson.csv');
+    //createnewfile_stepone.errormsg()
+    createnewfile_stepone.uploadedfilenamemethod('offers_geojson.csv')
+    createnewfile_stepone.GoNext()
+    createnewfile_stepone.verifyPopupContains('يوجد مساحة عمل غير مكتملة بالفعل.')
+
+  
 
     
   });

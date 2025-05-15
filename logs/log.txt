@@ -1,0 +1,54 @@
+[2025-05-13T07:33:34.724Z] [DEBUG] qase: Config: {"mode":"testops","debug":true,"testops":{"api":{"token":"6f6****f1a0"},"project":"GEO","uploadAttachments":true,"run":{"complete":true},"plan":{},"batch":{}},"framework":{"cypress":{"screenshotsFolder":"cypress/screenshots"}},"frameworkPackage":"cypress","frameworkName":"cypress","reporterName":"cypress-qase-reporter","report":{"connections":{"local":{}}}}
+[2025-05-13T07:33:35.369Z] [DEBUG] qase: Host data: {"system":"linux","machineName":"omnia-ThinkPad-E15-Gen-4","release":"6.11.0-24-generic","version":"Ubuntu 24.04.2 LTS","arch":"x64","node":"v18.19.1","npm":"9.2.0","framework":"14.3.2","reporter":"2.3.0","commons":"2.3.1","apiClientV1":"1.0.1","apiClientV2":"1.0.1"}
+[2025-05-13T07:33:35.378Z] [DEBUG] qase: Starting test run
+[2025-05-13T07:33:35.384Z] [DEBUG] qase: Creating test run: {"title":"Automated run 2025-05-13T07:33:35.383Z","description":"","is_autotest":true,"cases":[],"start_time":"2025-05-13 07:33:25"}
+[2025-05-13T07:37:08.355Z] [DEBUG] qase: Config: {"mode":"local","debug":true,"testops":{"api":{"token":"6f6****f1a0"},"project":"GEOCORE","uploadAttachments":true,"run":{"complete":true},"plan":{},"batch":{}},"framework":{"cypress":{"screenshotsFolder":"cypress/screenshots"}},"frameworkPackage":"cypress","frameworkName":"cypress","reporterName":"cypress-qase-reporter","report":{"connections":{"local":{}}}}
+[2025-05-13T07:37:08.940Z] [DEBUG] qase: Host data: {"system":"linux","machineName":"omnia-ThinkPad-E15-Gen-4","release":"6.11.0-24-generic","version":"Ubuntu 24.04.2 LTS","arch":"x64","node":"v18.19.1","npm":"9.2.0","framework":"14.3.2","reporter":"2.3.0","commons":"2.3.1","apiClientV1":"1.0.1","apiClientV2":"1.0.1"}
+[2025-05-13T07:37:08.942Z] [ERROR] qase: Unable to create upstream reporter:
+ Error: Unknown mode type
+    at QaseReporter.createReporter (/home/omnia/Desktop/geocore-qa/node_modules/qase-javascript-commons/dist/qase.js:403:23)
+    at new QaseReporter (/home/omnia/Desktop/geocore-qa/node_modules/qase-javascript-commons/dist/qase.js:90:42)
+    at QaseReporter.getInstance (/home/omnia/Desktop/geocore-qa/node_modules/qase-javascript-commons/dist/qase.js:266:37)
+    at beforeRunHook (/home/omnia/Desktop/geocore-qa/node_modules/cypress-qase-reporter/dist/hooks.js:13:61)
+    at Object.handler (/home/omnia/Desktop/geocore-qa/node_modules/cypress-qase-reporter/dist/plugin.js:6:41)
+    at invoke (/home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/@packages/server/lib/plugins/child/run_plugins.js:189:18)
+    at /home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/@packages/server/lib/plugins/util.js:59:14
+    at tryCatcher (/home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise.attempt.Promise.try (/home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/bluebird/js/release/method.js:39:29)
+    at Object.wrapChildPromise (/home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/@packages/server/lib/plugins/util.js:58:23)
+    at RunPlugins.execute (/home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/@packages/server/lib/plugins/child/run_plugins.js:168:21)
+    at EventEmitter.<anonymous> (/home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/@packages/server/lib/plugins/child/run_plugins.js:56:12)
+    at EventEmitter.emit (node:events:517:28)
+    at process.<anonymous> (/home/omnia/.cache/Cypress/14.3.2/Cypress/resources/app/node_modules/@packages/server/lib/plugins/util.js:33:22)
+    at process.emit (node:events:517:28)
+    at emit (node:internal/child_process:944:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[2025-05-13T07:41:45.741Z] [DEBUG] qase: Config: {"mode":"testops","debug":true,"testops":{"api":{"token":"6f6****f1a0"},"project":"GEOCORE","uploadAttachments":true,"run":{"complete":true},"plan":{},"batch":{}},"framework":{"cypress":{"screenshotsFolder":"cypress/screenshots"}},"frameworkPackage":"cypress","frameworkName":"cypress","reporterName":"cypress-qase-reporter","report":{"connections":{"local":{}}}}
+[2025-05-13T07:41:46.343Z] [DEBUG] qase: Host data: {"system":"linux","machineName":"omnia-ThinkPad-E15-Gen-4","release":"6.11.0-24-generic","version":"Ubuntu 24.04.2 LTS","arch":"x64","node":"v18.19.1","npm":"9.2.0","framework":"14.3.2","reporter":"2.3.0","commons":"2.3.1","apiClientV1":"1.0.1","apiClientV2":"1.0.1"}
+[2025-05-13T07:41:46.344Z] [DEBUG] qase: Starting test run
+[2025-05-13T07:41:46.345Z] [DEBUG] qase: Creating test run: {"title":"Automated run 2025-05-13T07:41:46.345Z","description":"","is_autotest":true,"cases":[],"start_time":"2025-05-13 07:41:36"}
+[2025-05-13T07:41:47.690Z] [DEBUG] qase: Test run created: {"status":true,"result":{"id":6}}
+[2025-05-13T07:41:52.121Z] [INFO] qase: [34mTest run link: https://app.qase.io/run/GEOCORE/dashboard/6[39m
+[2025-05-13T07:41:52.122Z] [INFO] qase: [32mRun 6 completed[39m
+[2025-05-13T07:45:03.945Z] [DEBUG] qase: Config: {"mode":"testops","debug":true,"testops":{"api":{"token":"6f6****f1a0"},"project":"GEOCORE","uploadAttachments":true,"run":{"complete":true},"plan":{},"batch":{}},"framework":{"cypress":{"screenshotsFolder":"cypress/screenshots"}},"frameworkPackage":"cypress","frameworkName":"cypress","reporterName":"cypress-qase-reporter","report":{"connections":{"local":{}}}}
+[2025-05-13T07:45:04.581Z] [DEBUG] qase: Host data: {"system":"linux","machineName":"omnia-ThinkPad-E15-Gen-4","release":"6.11.0-24-generic","version":"Ubuntu 24.04.2 LTS","arch":"x64","node":"v18.19.1","npm":"9.2.0","framework":"14.3.2","reporter":"2.2.7","commons":"2.2.19","apiClient":"2.4.3"}
+[2025-05-13T07:45:04.585Z] [DEBUG] qase: Starting test run
+[2025-05-13T07:45:04.585Z] [DEBUG] qase: Creating test run
+[2025-05-13T07:45:05.889Z] [DEBUG] qase: Test run created: 7
+[2025-05-13T07:45:10.360Z] [INFO] qase: [32mRun 7 completed[39m
+[2025-05-13T07:45:10.361Z] [INFO] qase: [34mTest run link: https://app.qase.io/run/GEOCORE/dashboard/7[39m
+[2025-05-13T08:08:00.290Z] [DEBUG] qase: Config: {"mode":"testops","debug":true,"testops":{"api":{"token":"6f6****f1a0"},"project":"GEOCORE","uploadAttachments":true,"run":{"complete":true},"plan":{},"batch":{}},"framework":{"cypress":{"screenshotsFolder":"cypress/screenshots"}},"frameworkPackage":"cypress","frameworkName":"cypress","reporterName":"cypress-qase-reporter","report":{"connections":{"local":{}}}}
+[2025-05-13T08:08:00.898Z] [DEBUG] qase: Host data: {"system":"linux","machineName":"omnia-ThinkPad-E15-Gen-4","release":"6.11.0-24-generic","version":"Ubuntu 24.04.2 LTS","arch":"x64","node":"v18.19.1","npm":"9.2.0","framework":"14.3.2","reporter":"2.2.7","commons":"2.2.19","apiClient":"2.4.3"}
+[2025-05-13T08:08:00.902Z] [DEBUG] qase: Starting test run
+[2025-05-13T08:08:00.902Z] [DEBUG] qase: Creating test run
+[2025-05-13T08:08:02.196Z] [DEBUG] qase: Test run created: 8
+[2025-05-13T08:08:05.950Z] [DEBUG] qase: Config: {"id":"default","mode":"testops","debug":true,"testops":{"api":{"token":"6f6****f1a0"},"project":"GEOCORE","uploadAttachments":true,"run":{"complete":true,"id":8},"plan":{},"batch":{}},"frameworkPackage":"cypress","frameworkName":"cypress","reporterName":"cypress-qase-reporter","report":{"connections":{"local":{}}}}
+[2025-05-13T08:08:06.551Z] [DEBUG] qase: Host data: {"system":"linux","machineName":"omnia-ThinkPad-E15-Gen-4","release":"6.11.0-24-generic","version":"Ubuntu 24.04.2 LTS","arch":"x64","node":"v18.19.1","npm":"9.2.0","framework":"14.3.2","reporter":"2.2.7","commons":"2.2.19","apiClient":"2.4.3"}
+[2025-05-13T08:08:31.702Z] [INFO] qase: [32mTest Visitgeocore passed[39m
+[2025-05-13T08:08:31.703Z] [DEBUG] qase: Adding test result: {"attachments":[],"author":null,"fields":{},"message":"","muted":false,"params":{},"group_params":{},"relations":{"suite":{"data":[{"title":"Should Login to GEOCORE","public_id":null}]}},"run_id":null,"signature":"cypress::e2e::logintogeocore.cy.js::should_login_to_geocore::visitgeocore_(qase_id:_1)::1","steps":[],"id":"97ee784e-21c9-429e-98a0-0f0194014161","execution":{"status":"passed","start_time":null,"end_time":null,"duration":25093,"stacktrace":null,"thread":null},"testops_id":[1],"title":"Visitgeocore"}
+[2025-05-13T08:08:32.332Z] [DEBUG] qase: Config: {"id":"default","mode":"testops","debug":true,"testops":{"api":{"token":"6f6****f1a0"},"project":"GEOCORE","uploadAttachments":true,"run":{"complete":true,"id":8},"plan":{},"batch":{}},"report":{"connections":{"local":{}}}}
+[2025-05-13T08:08:32.947Z] [DEBUG] qase: Host data: {"system":"linux","machineName":"omnia-ThinkPad-E15-Gen-4","release":"6.11.0-24-generic","version":"Ubuntu 24.04.2 LTS","arch":"x64","node":"v18.19.1","npm":"9.2.0","framework":"","reporter":"","commons":"2.2.19","apiClient":"2.4.3"}
+[2025-05-13T08:08:32.952Z] [DEBUG] qase: Transformed result: {"title":"Visitgeocore","execution":{"status":"passed","start_time":null,"end_time":null,"duration":25093,"stacktrace":null,"thread":null},"testops_id":1,"attachments":[],"steps":[],"params":{},"param_groups":[],"relations":{"suite":{"data":[{"public_id":null,"title":"Should Login to GEOCORE"}]}},"message":"","fields":{},"defect":false}
+[2025-05-13T08:08:33.872Z] [DEBUG] qase: Results sent to Qase: 1
+[2025-05-13T08:08:34.803Z] [INFO] qase: [32mRun 8 completed[39m
+[2025-05-13T08:08:34.804Z] [INFO] qase: [34mTest run link: https://app.qase.io/run/GEOCORE/dashboard/8[39m

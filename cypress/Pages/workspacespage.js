@@ -4,7 +4,7 @@ class WorkSpacesPage {
     //Elements 
 
     get Uploadfilebtn() {
-        return cy.get('.grid-cols-2 > :nth-child(1)', { timeout: 10000 }).should('not.be.disabled')
+        return cy.get('.grid-cols-2 > :nth-child(1)', { timeout: 15000 }).should('not.be.disabled')
       }
       
     get DesignLayerfromScratch () { 

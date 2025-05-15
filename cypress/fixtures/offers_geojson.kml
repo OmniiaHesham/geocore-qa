@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="offers_geojson" id="offers_geojson">
+	<SimpleField name="id" type="int"></SimpleField>
+	<SimpleField name="parcel_num" type="string"></SimpleField>
+	<SimpleField name="plan_numbe" type="string"></SimpleField>
+	<SimpleField name="block_numb" type="string"></SimpleField>
+	<SimpleField name="land_use" type="string"></SimpleField>
+	<SimpleField name="sub_land_u" type="string"></SimpleField>
+	<SimpleField name="commercial" type="string"></SimpleField>
+	<SimpleField name="index_righ" type="int"></SimpleField>
+	<SimpleField name="PA_CODE" type="string"></SimpleField>
+</Schema>
+<Folder><name>offers_geojson</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#offers_geojson">
+		<SimpleData name="id">1</SimpleData>
+		<SimpleData name="parcel_num">3971</SimpleData>
+		<SimpleData name="plan_numbe">412?/?</SimpleData>
+		<SimpleData name="land_use">????</SimpleData>
+		<SimpleData name="commercial">0</SimpleData>
+		<SimpleData name="index_righ">466</SimpleData>
+		<SimpleData name="PA_CODE">FR-3-101</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>39.1279982120001,22.1777603850001 39.1277848400001,22.1777570450001 39.1277789740001,22.1780822330001 39.1280214440001,22.1780860260001 39.1280268190001,22.177787939 39.1279982120001,22.1777603850001</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#offers_geojson">
+		<SimpleData name="id">70632847</SimpleData>
+		<SimpleData name="parcel_num">7798</SimpleData>
+		<SimpleData name="plan_numbe">412?/?</SimpleData>
+		<SimpleData name="land_use">????</SimpleData>
+		<SimpleData name="commercial">0</SimpleData>
+		<SimpleData name="index_righ">466</SimpleData>
+		<SimpleData name="PA_CODE">FR-3-101</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>39.14415273,22.1655433220001 39.1439961080001,22.165540886 39.1439910890001,22.1658209120001 39.14414771,22.165823349 39.14415273,22.1655433220001</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#offers_geojson">
+		<SimpleData name="id">72462592</SimpleData>
+		<SimpleData name="parcel_num">4331</SimpleData>
+		<SimpleData name="plan_numbe">412?/?</SimpleData>
+		<SimpleData name="land_use">????</SimpleData>
+		<SimpleData name="commercial">0</SimpleData>
+		<SimpleData name="index_righ">466</SimpleData>
+		<SimpleData name="PA_CODE">FR-3-101</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>39.12690079,22.1735236150001 39.1269048670001,22.173297792 39.1265557250001,22.173292325 39.126551647,22.1735181490001 39.12690079,22.1735236150001</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#offers_geojson">
+		<SimpleData name="id">72952076</SimpleData>
+		<SimpleData name="parcel_num">5237</SimpleData>
+		<SimpleData name="plan_numbe">412?/?</SimpleData>
+		<SimpleData name="land_use">????</SimpleData>
+		<SimpleData name="commercial">0</SimpleData>
+		<SimpleData name="index_righ">466</SimpleData>
+		<SimpleData name="PA_CODE">FR-3-101</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>39.129807779,22.1769393480001 39.129813642,22.176614161 39.1295711750001,22.17661037 39.1295692200001,22.176718765 39.1295653130001,22.176935557 39.129807779,22.1769393480001</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#offers_geojson">
+		<SimpleData name="id">74465838</SimpleData>
+		<SimpleData name="parcel_num">4565</SimpleData>
+		<SimpleData name="plan_numbe">412?/?</SimpleData>
+		<SimpleData name="land_use">????</SimpleData>
+		<SimpleData name="commercial">0</SimpleData>
+		<SimpleData name="index_righ">466</SimpleData>
+		<SimpleData name="PA_CODE">FR-3-101</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>39.1538016500001,22.184301426 39.1541023250001,22.184306082 39.154104929,22.184160198 39.1538042540001,22.184155542 39.1538016500001,22.184301426</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#offers_geojson">
+		<SimpleData name="id">74529331</SimpleData>
+		<SimpleData name="parcel_num">4917</SimpleData>
+		<SimpleData name="plan_numbe">412?/?</SimpleData>
+		<SimpleData name="land_use">????</SimpleData>
+		<SimpleData name="commercial">0</SimpleData>
+		<SimpleData name="index_righ">466</SimpleData>
+		<SimpleData name="PA_CODE">FR-3-101</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>39.1312560740001,22.184054874 39.13125998,22.183838082 39.1309059610001,22.183832549 39.1308763760001,22.183859193 39.1308729580001,22.1840488870001 39.1312560740001,22.184054874</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#offers_geojson">
+		<SimpleData name="id">74974832</SimpleData>
+		<SimpleData name="parcel_num">6241</SimpleData>
+		<SimpleData name="plan_numbe">412?/?</SimpleData>
+		<SimpleData name="land_use">????</SimpleData>
+		<SimpleData name="commercial">0</SimpleData>
+		<SimpleData name="index_righ">466</SimpleData>
+		<SimpleData name="PA_CODE">FR-3-101</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>39.1520717600001,22.171978994 39.1523724080001,22.1719836550001 39.152375014,22.171837769 39.1520743670001,22.17183311 39.1520717600001,22.171978994</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>
