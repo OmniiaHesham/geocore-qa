@@ -6,6 +6,9 @@
   "author": "OmniiaHesham <ohesham@gt.com.sa>",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^14.3.2"
+    "cypress": "^14.3.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-multi-reporters": "^2.0.5",
+    "cypress-qase-reporter": "^2.2.7"
   }
 }
