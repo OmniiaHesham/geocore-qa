@@ -31,4 +31,11 @@ class AiReport_Step2 {
 
 
     //methods
+
+    ShowFullScreenOption () {
+        this.showfullscreen.click()
+    }
+
 }
+
+export default AiReport_Step2 ;
