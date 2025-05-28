@@ -3,7 +3,7 @@ name: GeoCore E2E Tests
 on:
   push:
     branches:
-      - main
+      - wip/feat/geocore
 
 env:
   OVPN_FILE: ./vpn_config.ovpn
