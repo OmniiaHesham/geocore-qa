@@ -5,7 +5,7 @@ import { qase } from 'cypress-qase-reporter/mocha';
 
 
 
-import LoginPage from "../Pages/LoginPage"
+import LoginPage from "../support/pages/LoginPage"
 
 
 
@@ -15,10 +15,16 @@ import LoginPage from "../Pages/LoginPage"
 
     it('Visitgeocore', () => {
       const loginpage = new LoginPage 
+      const username = Cypress.env('geocoreUsername');
+      const password = Cypress.env('geocorePassword');
+
+      if (!username || !password) {
+        throw new Error('Missing GEOCORE credentials. Check environment variables.');
+      }
       
       loginpage.load()
       loginpage.openLoginForm()
-      loginpage.login("dev@gt.com.sa" , "q9qcvzssqr")
+      loginpage.login(username, password)
 
     }));
 

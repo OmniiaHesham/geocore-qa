@@ -1,19 +1,25 @@
 /// <reference types="cypress" />
 
 
-import LoginPage from "../Pages/LoginPage"
-import WorkSpacesPage from "../Pages/workspacespage"
+import LoginPage from "../support/pages/LoginPage"
+import WorkSpacesPage from "../support/pages/workspacespage"
 
 describe('Workspacepageactions', () => {
     const loginpage = new LoginPage 
     const workspacespage = new WorkSpacesPage
+    const username = Cypress.env('geocoreUsername');
+    const password = Cypress.env('geocorePassword');
+
+    if (!username || !password) {
+      throw new Error('Missing GEOCORE credentials. Check environment variables.');
+    }
 
 
  beforeEach (() => {
         //Login to the App 
         loginpage.load()
         loginpage.openLoginForm()
-        loginpage.login("dev@gt.com.sa" , "q9qcvzssqr")
+        loginpage.login(username , password)
   
       });
 

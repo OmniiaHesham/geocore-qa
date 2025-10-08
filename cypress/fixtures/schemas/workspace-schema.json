@@ -1,0 +1,778 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/schema#",
+    "required": [
+      "PA_CODE",
+      "communication",
+      "does_the_site_match_the_photo",
+      "facilities",
+      "facility_name",
+      "facility_name_based_on_reception",
+      "facility_status",
+      "inc_id",
+      "is_building_on_multiple_parcels",
+      "is_facility_board_present",
+      "is_there_accommodation_services",
+      "is_there_more_than_one_service_provider_on_same_parcel",
+      "is_there_other_service_provider_branches",
+      "is_there_previous_service_provider_name",
+      "number_of_branches",
+      "number_of_building_floors",
+      "number_of_parcels",
+      "permits",
+      "photos",
+      "pkAddressM",
+      "property_data",
+      "services",
+      "type"
+    ],
+    "properties": {
+      "type": {
+        "$ref": "#/definitions/type",
+        "type": "string"
+      },
+      "inc_id": {
+        "type": "integer"
+      },
+      "photos": {
+        "type": "object",
+        "required": [
+          "basement_facilities",
+          "basement_photos",
+          "civil_defense_drawing_photo",
+          "corridors_photos",
+          "documents_photos",
+          "entrance_photos",
+          "external_photos",
+          "floors_from_inside_elevator_photos",
+          "gate_leading_to_basement_photos",
+          "invoices_photos",
+          "last_room_in_one_of_floors_photos",
+          "lobby_photos",
+          "payment_device_from_side_photo",
+          "reception_photos",
+          "room_doors_photos",
+          "room_number_plate_photos"
+        ],
+        "properties": {
+          "lobby_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "basement_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "entrance_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "external_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "invoices_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "corridors_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "documents_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reception_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "room_doors_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "basement_facilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "room_number_plate_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "civil_defense_drawing_photo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "payment_device_from_side_photo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gate_leading_to_basement_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "last_room_in_one_of_floors_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "floors_from_inside_elevator_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PA_CODE": {
+        "type": "string"
+      },
+      "permits": {
+        "type": "object",
+        "required": [
+          "civil_defense_permit_exists",
+          "commercial_register_exists",
+          "ministry_of_hajj_permit_exists",
+          "ministry_of_tourism_permit_exists",
+          "municipal_permit_exists",
+          "tax_registration_certificate_exists"
+        ],
+        "properties": {
+          "municipal_permit_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "municipal_permit_exists": {
+            "type": "string"
+          },
+          "municipal_permit_number": {
+            "type": "string"
+          },
+          "commercial_register_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "civil_defense_permit_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "commercial_register_exists": {
+            "type": "string"
+          },
+          "commercial_register_number": {
+            "type": "string"
+          },
+          "civil_defense_permit_exists": {
+            "type": "string"
+          },
+          "civil_defense_permit_number": {
+            "type": "string"
+          },
+          "municipal_permit_expiry_date": {
+            "type": "object",
+            "required": [
+              "hijri"
+            ],
+            "properties": {
+              "hijri": {
+                "type": "object",
+                "required": [
+                  "day",
+                  "month",
+                  "year"
+                ],
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "month": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "ministry_of_hajj_permit_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ministry_of_hajj_permit_exists": {
+            "type": "string"
+          },
+          "ministry_of_hajj_permit_number": {
+            "type": "string"
+          },
+          "commercial_register_expiry_date": {
+            "type": "object",
+            "required": [
+              "hijri"
+            ],
+            "properties": {
+              "hijri": {
+                "type": "object",
+                "required": [
+                  "day",
+                  "month",
+                  "year"
+                ],
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "month": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "civil_defense_permit_expiry_date": {
+            "type": "object",
+            "required": [
+              "hijri"
+            ],
+            "properties": {
+              "hijri": {
+                "type": "object",
+                "required": [
+                  "day",
+                  "month",
+                  "year"
+                ],
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "month": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "ministry_of_tourism_permit_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ministry_of_tourism_permit_exists": {
+            "type": "string"
+          },
+          "ministry_of_tourism_permit_number": {
+            "type": "string"
+          },
+          "tax_registration_certificate_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ministry_of_hajj_permit_expiry_date": {
+            "type": "object",
+            "required": [
+              "hijri"
+            ],
+            "properties": {
+              "hijri": {
+                "type": "object",
+                "required": [
+                  "day",
+                  "month",
+                  "year"
+                ],
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "month": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "tax_registration_certificate_exists": {
+            "type": "string"
+          },
+          "tax_registration_certificate_number": {
+            "type": "string"
+          },
+          "ministry_of_tourism_permit_expiry_date": {
+            "type": "object",
+            "required": [
+              "hijri"
+            ],
+            "properties": {
+              "hijri": {
+                "type": "object",
+                "required": [
+                  "day",
+                  "month",
+                  "year"
+                ],
+                "properties": {
+                  "day": {
+                    "type": "integer"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "month": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "ministry_of_hajj_permit_number_of_pilgrims": {
+            "type": "integer"
+          },
+          "ministry_of_hajj_permit_total_number_of_rooms": {
+            "type": "integer"
+          },
+          "ministry_of_hajj_permit_number_of_permitted_floors": {
+            "type": "integer"
+          }
+        }
+      },
+      "services": {
+        "type": "object",
+        "required": [
+          "elevator_photos",
+          "has_communication_cabin",
+          "has_electricity_meter",
+          "has_elevators",
+          "has_parking_basement",
+          "has_water_meter",
+          "number_of_elevators"
+        ],
+        "properties": {
+          "has_elevators": {
+            "type": "string"
+          },
+          "basement_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "elevator_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "has_water_meter": {
+            "type": "string"
+          },
+          "number_of_floors": {
+            "type": "integer"
+          },
+          "water_meter_photo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "number_of_elevators": {
+            "type": "integer"
+          },
+          "has_parking_basement": {
+            "type": "string"
+          },
+          "has_electricity_meter": {
+            "type": "string"
+          },
+          "number_of_water_meters": {
+            "type": "integer"
+          },
+          "electricity_meter_photo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "has_communication_cabin": {
+            "type": "string"
+          },
+          "communication_cabin_photo": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "number_of_electricity_meters": {
+            "type": "integer"
+          },
+          "number_of_communication_cabins": {
+            "type": "integer"
+          }
+        }
+      },
+      "facilities": {
+        "type": "object",
+        "required": [
+          "is_cafeteria_available",
+          "is_gym_available",
+          "is_health_club_available",
+          "is_pool_available",
+          "is_restaurant_available",
+          "is_shops_available",
+          "rooms_photos"
+        ],
+        "properties": {
+          "gym_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "shops_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rooms_photos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cafeteria_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "is_gym_available": {
+            "type": "string"
+          },
+          "restaurant_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "health_club_image": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "is_pool_available": {
+            "type": "string"
+          },
+          "is_shops_available": {
+            "type": "string"
+          },
+          "number_of_cafeterias": {
+            "type": "integer"
+          },
+          "number_of_restaurants": {
+            "type": "integer"
+          },
+          "is_cafeteria_available": {
+            "type": "string"
+          },
+          "is_restaurant_available": {
+            "type": "string"
+          },
+          "is_health_club_available": {
+            "type": "string"
+          }
+        }
+      },
+      "pkAddressM": {
+        "type": "integer"
+      },
+      "communication": {
+        "type": "object",
+        "required": [
+          "is_contact_number_available"
+        ],
+        "properties": {
+          "website_url": {
+            "type": "string"
+          },
+          "mobile_contact_number": {
+            "type": "string"
+          },
+          "landline_contact_number": {
+            "type": "string"
+          },
+          "is_contact_number_available": {
+            "type": "string"
+          }
+        }
+      },
+      "facility_name": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "property_data": {
+        "type": "object",
+        "required": [
+          "activity_type_classification",
+          "floors",
+          "opening_year",
+          "owner_name",
+          "saudi_employee_count",
+          "total_employee_count",
+          "total_number_of_beds",
+          "total_number_of_floors",
+          "total_number_of_rooms"
+        ],
+        "properties": {
+          "floors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "floor_number"
+              ],
+              "properties": {
+                "floor_number": {
+                  "type": "string"
+                },
+                "number_of_beds": {
+                  "type": "integer"
+                },
+                "number_of_rooms": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "owner_name": {
+            "type": "string"
+          },
+          "opening_year": {
+            "type": "string"
+          },
+          "saudi_employee_count": {
+            "type": "integer"
+          },
+          "total_employee_count": {
+            "type": "integer"
+          },
+          "total_number_of_beds": {
+            "type": "integer"
+          },
+          "total_number_of_rooms": {
+            "type": "integer"
+          },
+          "total_number_of_floors": {
+            "type": "integer"
+          },
+          "activity_type_classification": {
+            "type": "object",
+            "required": [
+              "activity_classification",
+              "activity_type"
+            ],
+            "properties": {
+              "activity_type": {
+                "type": "string"
+              },
+              "activity_classification": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "facility_status": {
+        "type": "string"
+      },
+      "number_of_parcels": {
+        "$ref": "#/definitions/number_of_parcels",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "number_of_branches": {
+        "$ref": "#/definitions/number_of_branches",
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "is_facility_board_present": {
+        "type": "string"
+      },
+      "number_of_building_floors": {
+        "$ref": "#/definitions/number_of_building_floors",
+        "type": "integer"
+      },
+      "does_the_site_match_the_photo": {
+        "$ref": "#/definitions/does_the_site_match_the_photo",
+        "type": "string"
+      },
+      "is_building_on_multiple_parcels": {
+        "$ref": "#/definitions/is_building_on_multiple_parcels",
+        "type": "string"
+      },
+      "is_there_accommodation_services": {
+        "type": "string"
+      },
+      "facility_name_based_on_reception": {
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "is_there_previous_service_provider_name": {
+        "$ref": "#/definitions/is_there_previous_service_provider_name",
+        "type": "string"
+      },
+      "is_there_other_service_provider_branches": {
+        "$ref": "#/definitions/is_there_other_service_provider_branches",
+        "type": "string"
+      },
+      "is_there_more_than_one_service_provider_on_same_parcel": {
+        "$ref": "#/definitions/is_there_more_than_one_service_provider_on_same_parcel",
+        "type": "string"
+      }
+    },
+    "definitions": {
+      "type": {
+        "enum": [
+          "directed",
+          "scanned"
+        ],
+        "type": "string"
+      },
+      "number_of_parcels": {
+        "enum": [
+          2,
+          3,
+          4,
+          5,
+          null
+        ],
+        "type": "integer"
+      },
+      "number_of_branches": {
+        "enum": [
+          1,
+          2,
+          3,
+          5,
+          15,
+          null
+        ],
+        "type": "integer"
+      },
+      "number_of_building_floors": {
+        "enum": [
+          32,
+          4,
+          7,
+          8,
+          11,
+          12,
+          14,
+          15,
+          18,
+          19,
+          22,
+          23,
+          24,
+          25,
+          27,
+          30,
+          31
+        ],
+        "type": "integer"
+      },
+      "does_the_site_match_the_photo": {
+        "enum": [
+          "نعم",
+          "لا"
+        ],
+        "type": "string"
+      },
+      "is_building_on_multiple_parcels": {
+        "enum": [
+          "نعم",
+          "لا"
+        ],
+        "type": "string"
+      },
+      "is_there_previous_service_provider_name": {
+        "enum": [
+          "نعم",
+          "لا"
+        ],
+        "type": "string"
+      },
+      "is_there_other_service_provider_branches": {
+        "enum": [
+          "نعم",
+          "لا"
+        ],
+        "type": "string"
+      },
+      "is_there_more_than_one_service_provider_on_same_parcel": {
+        "enum": [
+          "نعم",
+          "لا"
+        ],
+        "type": "string"
+      }
+    }
+  }

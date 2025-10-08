@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Tourism CSV dataset",
+    "layerName": "Automated Tourism Layer",
+    "description": "استيراد بيانات سياحية بصيغة CSV لاختبار إنشاء طبقة جديدة.",
+    "fixture": "datasets/بيانات السياحة 1445هـ - مرتبط (حج).csv",
+    "coordinateFields": {
+      "longitude": "خطوط الطول",
+      "latitude": "خطوط العرض"
+    }
+  },
+  {
+    "name": "Offers CSV dataset",
+    "layerName": "Automated Offers Layer",
+    "description": "تحميل بيانات عروض تجريبية بصيغة CSV لاختبار الحقول الديناميكية.",
+    "fixture": "datasets/offers_geojson.csv",
+    "coordinateFields": {
+      "longitude": "Longitude",
+      "latitude": "Latitude"
+    }
+  }
+]

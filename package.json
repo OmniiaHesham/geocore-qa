@@ -1,14 +1,20 @@
 {
   "name": "geocore-qa",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "repository": "https://github.com/SA-GeoTech/geocore-qa.git",
   "author": "OmniiaHesham <ohesham@gt.com.sa>",
   "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:headed": "cypress run --headed"
+  },
   "devDependencies": {
-    "cypress": "^14.3.2",
+    "cypress": "^14.5.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^2.0.5",
-    "cypress-qase-reporter": "^2.2.7"
+    "cypress-qase-reporter": "^2.2.7",
+    "dotenv": "^16.4.5"
   }
 }
