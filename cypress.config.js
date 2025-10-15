@@ -41,11 +41,11 @@ module.exports = defineConfig({
     downloadsFolder: "cypress/downloads",
     screenshotsFolder: "cypress/screenshots",
     videosFolder: "cypress/videos",
->>>>>>> 6caa142 (Put upload data set data in a json file)
     viewportWidth: 1440,
     viewportHeight: 900,
     chromeWebSecurity: false,
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 10000,    viewportWidth: 1440,
+
     pageLoadTimeout: 30000,
     requestTimeout: 30000,
     includeShadowDom: true,
