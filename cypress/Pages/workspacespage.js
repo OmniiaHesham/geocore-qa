@@ -4,7 +4,7 @@ class WorkSpacesPage {
     //Elements 
 
     get Uploadfilebtn() {
-        return cy.get('.grid-cols-2 > :nth-child(1)', { timeout: 15000 }).should('not.be.disabled')
+        return cy.contains(/رفع ملف|Upload File/i, { timeout: 15000 });
       }
       
     get DesignLayerfromScratch () { 
@@ -73,7 +73,14 @@ class WorkSpacesPage {
 
     //Methods
     ClickOnUploadFile () {
-        this.Uploadfilebtn.click()
+        this.Uploadfilebtn.should('be.visible').then(($el) => {
+            const clickable = $el.closest('button, [role="button"], a');
+            if (clickable.length) {
+                cy.wrap(clickable).click();
+                return;
+            }
+            cy.wrap($el).click();
+        });
     }
 
     ChangeLanguage () {

@@ -1,8 +1,21 @@
-class ViewSchema_Step4 {
+class ShowEDAReport_Step3 {
+
+  // Elements
+  get fullScreenButton() {
+    return cy
+      .contains('button[data-testid="geocore-button-Comp"]', 'وضع ملء الشاشة', { timeout: 30000 })
+      .should('be.visible');
+  }
 
   get nextButton() {
     return cy
       .contains('button[data-testid="geocore-button-Comp"]', 'التالي', { timeout: 30000 })
+      .should('be.visible');
+  }
+
+  get sweetvizToggle() {
+    return cy
+      .contains('button', 'Sweetviz Report', { timeout: 30000 })
       .should('be.visible');
   }
 
@@ -20,9 +33,18 @@ class ViewSchema_Step4 {
     });
   }
 
+  // Methods
+  ShowFullScreenOption() {
+    this.waitUntilEnabled(this.fullScreenButton).click();
+  }
+
+  ShowSweetvizReport() {
+    this.waitUntilEnabled(this.sweetvizToggle).click();
+  }
+
   GoNext() {
-    this.waitUntilEnabled(this.nextButton).click();
+    this.nextButton.click();
   }
 }
 
-export default ViewSchema_Step4;
+export default ShowEDAReport_Step3;

@@ -3,14 +3,20 @@
 import LoginPage from "../support/pages/LoginPage";
 import WorkSpacesPage from "../support/pages/workspacespage";
 import CreateNewFile_StepOne from "../support/pages/CreateNewFile_StepOne";
-import AiReport_Step2 from "../support/pages/aireport_step2";
+import GeometryValidation_Step2 from "../support/pages/Geometry-Validation_Step2";
+import ShowEDAReport_Step3 from "../support/pages/Show-EDA-Report_Step3";
+import ViewSchema_Step4 from "../support/pages/viewschema_step4";
+import Metadata_Step5 from "../support/pages/Metadata_Step5";
 import datasetScenarios from "../fixtures/test-cases/upload-datasets.json";
 
 describe('GeoCore - Upload Dataset Flow', () => {
   const loginpage = new LoginPage 
   const workspacesPage = new WorkSpacesPage
   const createnewfile_stepone = new CreateNewFile_StepOne
-  const aireport_step2 = new AiReport_Step2
+  const geometryValidation_step2 = new GeometryValidation_Step2
+  const showEDAReport_step3 = new ShowEDAReport_Step3
+  const viewSchema_step4 = new ViewSchema_Step4
+  const metadata_step5 = new Metadata_Step5
   const username = Cypress.env('geocoreUsername');
   const password = Cypress.env('geocorePassword');
 
@@ -45,13 +51,30 @@ describe('GeoCore - Upload Dataset Flow', () => {
 
         createnewfile_stepone.handlePopupIfExistsAndChoose();
 
-        aireport_step2.AssertDefaultGeometryType();
+        geometryValidation_step2.AssertDefaultGeometryType();
 
         if (coordinateFields) {
-          aireport_step2.selectCoordinateFields(coordinateFields);
+          geometryValidation_step2.selectCoordinateFields(coordinateFields);
         }
 
-        aireport_step2.ShowFullScreenOption();
+        geometryValidation_step2.GoNext();
+
+        cy.url({ timeout: 15000 }).should('include', '/create-workspace/UPLOAD_FILE/2');
+
+        showEDAReport_step3.ShowFullScreenOption();
+        showEDAReport_step3.ShowSweetvizReport();
+        showEDAReport_step3.GoNext();
+
+        cy.url({ timeout: 15000 }).should('include', '/create-workspace/UPLOAD_FILE/3');
+
+        viewSchema_step4.GoNext();
+
+        cy.url({ timeout: 15000 }).should('include', '/create-workspace/UPLOAD_FILE/4');
+
+        metadata_step5.enterTitle(`${layerName} - Metadata Title`);
+        metadata_step5.GoNext();
+
+        cy.url({ timeout: 15000 }).should('include', '/create-workspace/UPLOAD_FILE/5');
       });
     },
   );

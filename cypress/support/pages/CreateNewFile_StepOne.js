@@ -1,36 +1,15 @@
 class CreateNewFile_StepOne {
-  getInputByLabel(labelPattern) {
-    return cy.contains('label', labelPattern, { timeout: 15000 })
-      .then(($label) => {
-        const inputId = $label.attr('for');
-        expect(inputId, `label matching ${labelPattern} should reference an input`).to.be.a('string').and.not.be.empty;
-        const escapedId = Cypress.$.escapeSelector(inputId);
-        return cy.get(`#${escapedId}`, { timeout: 15000 }).should('be.visible');
-      });
-  }
-
   // Elements
   get layername() {
-    return this.getInputByLabel(/Layer Name|اسم الطبقة/i);
+    return cy.get('#layer-form_layerName');
   }
 
   get layerdescription() {
-    return this.getInputByLabel(/(Layer\s*)?Description|وصف الطبقة/i);
+    return cy.get(':nth-child(2) > [data-testid="geocore-input-input"]');
   }
 
   get layercolor() {
-    return cy.get('[data-testid="geocore-ColorPickerWidget-input"]', { timeout: 15000 })
-      .should('be.visible');
-  }
-
-  get uploadfilepart() {
-    return cy
-      .get('[data-testid="geocore-FileUploadWidget-div"]', { timeout: 15000 })
-      .should('be.visible');
-  }
-
-  get errormsgoffilerequired() {
-    return cy.get('[data-testid="geocore-button-Comp"]', { timeout: 15000 }).should('be.visible');
+    return cy.get('[data-testid="geocore-ColorPickerWidget-input"]');
   }
 
   get uploadedfilename() {
@@ -39,18 +18,6 @@ class CreateNewFile_StepOne {
 
   get nexttostep2btn() {
     return cy.get('[data-testid="geocore-button-Comp"]', { timeout: 30000 }).should('be.visible');
-  }
-
-  get runningWorkspacePopup() {
-    return cy.get('[data-testid="geocore-IncompleteWorkspaceDialog-h3"]');
-  }
-
-  get YesOptionOfthePopup() {
-    return cy.get('.text-primary-foreground');
-  }
-
-  get NoOptionOfthePopup() {
-    return cy.get('.pt-0 > .border');
   }
 
   // Methods
@@ -97,11 +64,7 @@ class CreateNewFile_StepOne {
 
   uploadedfilenamemethod(filenameOrPath) {
     const expectedName = filenameOrPath.split('/').pop();
-    return this.uploadedfilename.should('contain', expectedName);
-  }
-
-  errormsg() {
-    this.errormsgoffilerequired.should('not.exist');
+    this.uploadedfilename.should('contain', expectedName);
   }
 
   GoNext() {
@@ -109,31 +72,18 @@ class CreateNewFile_StepOne {
   }
 
   handlePopupIfExistsAndChoose() {
-    const popupSelector = '[data-testid="geocore-IncompleteWorkspaceDialog-h3"]';
-    const noButtonSelector = '.pt-0 > .border';
-
     cy.get('body').then(($body) => {
-      const popup = $body.find(popupSelector).filter(':visible');
-      if (!popup.length) {
-        cy.log('No incomplete workspace popup detected');
-        return;
+      const selector = '[data-testid="geocore-IncompleteWorkspaceDialog-h3"]';
+      const $popup = $body.find(selector);
+
+      if ($popup.length > 0) {
+        cy.wrap($popup).should('be.visible');
+        cy.get('.text-primary-foreground').first().click();
+      } else {
+        cy.log('No popup displayed');
       }
-
-      cy.wrap(popup).should('be.visible');
-
-      cy.get(noButtonSelector, { timeout: 2000 })
-        .filter(':visible')
-        .first()
-        .should('be.visible')
-        .click({ force: true })
-        .then(() => {
-          cy.get(popupSelector).should('not.exist');
-          cy.log('Dismissed incomplete workspace popup by selecting No');
-        });
     });
   }
-  
-
 }
 
 export default CreateNewFile_StepOne;
