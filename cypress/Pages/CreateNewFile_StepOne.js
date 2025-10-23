@@ -2,7 +2,7 @@ class CreateNewFile_StepOne {
 
   // Elements
   get layername() {
-    return cy.get(':nth-child(1) > [data-testid="geocore-input-input"]');
+    return cy.get('#layer-form_layerName');
   }
 
   get layerdescription() {
@@ -10,7 +10,7 @@ class CreateNewFile_StepOne {
   }
 
   get layercolor() {
-    return cy.get('#root_layerColor');
+    return cy.get('[data-testid="geocore-ColorPickerWidget-input"]');
   }
 
   get uploadfilepart() {
@@ -69,8 +69,12 @@ class CreateNewFile_StepOne {
   }
 
   handlePopupIfExistsAndChoose() {
-    cy.get('[data-testid="geocore-IncompleteWorkspaceDialog-h3"]', { timeout: 5000 }).then(($popup) => {
-      if ($popup.length > 0 && $popup.is(':visible')) {
+    cy.get('body').then(($body) => {
+      const selector = '[data-testid="geocore-IncompleteWorkspaceDialog-h3"]';
+      const $popup = $body.find(selector);
+
+      if ($popup.length > 0) {
+        cy.wrap($popup).should('be.visible');
         cy.get('.text-primary-foreground').first().click();
       } else {
         cy.log('No popup displayed');
